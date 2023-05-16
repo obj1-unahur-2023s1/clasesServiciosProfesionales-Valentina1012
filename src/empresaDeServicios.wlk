@@ -75,9 +75,9 @@ class EmpresaDeServicios{
 	
 	method profesionalEsAtracivo(unProfesional){
 		const profQueCumplen=profesionales.filter({profesional=>profesional.provinciasDondePuedeTrabajar().contains(unProfesional.provinciasDondePuedeTrabajar())})
-		var ret=false
+		var ret=true
 		if(!profQueCumplen.isEmpty()){
-			ret=profQueCumplen.any({profesional=>profesional.honorariosPorHora()<unProfesional.honorariosPorHora()})
+			ret=!profQueCumplen.all({profesional=>profesional.honorariosPorHora()<unProfesional.honorariosPorHora()})
 		}
 		return ret
 	}
