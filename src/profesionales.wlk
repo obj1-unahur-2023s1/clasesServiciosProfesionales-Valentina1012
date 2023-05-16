@@ -1,3 +1,4 @@
+
 class Universidad {
 	var property provincia
 	var property pago
@@ -60,3 +61,4 @@ class ProfesionalLibre {
 		profesionalLibre.cobrarImporte(cantidad)
 	}
 }
+

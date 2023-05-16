@@ -1,10 +1,9 @@
-import profesionales.*
 
 class Persona{
 	var property provincia
 	
 	method puedeSerAtendido(profesional){
-		return profesional.universidad()==self.provincia()
+		return profesional.provinciasDondePuedeTrabajar().contains(self.provincia())
 	}
 }
 
